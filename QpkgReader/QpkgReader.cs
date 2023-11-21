@@ -1,5 +1,9 @@
 ﻿namespace ArxOne.Qnap;
 
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Formats.Tar;
 using System.IO.Compression;
 
