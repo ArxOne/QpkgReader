@@ -104,7 +104,7 @@ public class QpkgReader
             var elements = line.Split(separator);
             if (elements.Length != 2)
                 continue;
-            configuration[elements[0]] = elements[1];
+            configuration[elements[0]] = elements[1].Trim(" \t\n\r\0\x0B\"".ToCharArray());
         }
         return configuration;
     }
