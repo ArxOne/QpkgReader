@@ -45,6 +45,11 @@ public class QpkgReader
         return GetConfiguration(scriptLen);
     }
 
+    public static IDictionary<string, string> ReadPackageInfo(Stream inputStream)
+    {
+        var package = new QpkgReader(inputStream);
+        return package.ReadConfig();
+    }
 
     /// <summary>
     /// Gets the configuration.
