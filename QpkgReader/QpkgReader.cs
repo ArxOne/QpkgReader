@@ -57,7 +57,7 @@ public class QpkgReader
     /// <param name="scriptLen">Length of the script.</param>
     /// <returns></returns>
     /// <exception cref="System.FormatException">No control found</exception>
-    private IDictionary<string, string> GetConfiguration(int scriptLen)
+    private Dictionary<string, string> GetConfiguration(int scriptLen)
     {
         _stream.Seek(scriptLen, SeekOrigin.Begin);
         using var tarReader = new TarReader(_stream);
