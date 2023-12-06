@@ -101,7 +101,7 @@ public class QpkgReader
     /// <param name="config">The configuration.</param>
     /// <param name="separator">The separator.</param>
     /// <returns></returns>
-    private static IDictionary<string, string> ParseConfiguration(string config, char separator = '=')
+    private static Dictionary<string, string> ParseConfiguration(string config, char separator = '=')
     {
         var configuration = new Dictionary<string, string> { [""] = config };
         foreach (var line in config.Split('\n', StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim()).Where(v => !v.StartsWith('#')))
